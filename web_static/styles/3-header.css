@@ -4,3 +4,8 @@ header {
 	width: 100%;
 	border-bottom: 1px #CCCCCC;
 }
+img {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+}
