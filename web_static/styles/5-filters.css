@@ -1,15 +1,13 @@
 .filters .locations {
 	margin-top: 1%;
-	margin-left: 60%;
-	margin-right: 30px;
+	margin-left: 10%;
 	height: 100%;
 	width: 25%;
 	border-right: 1px solid #DDDDDD;
 }
-.filters .locations {
+.filters .amenities {
         margin-top: 1%;
-        margin-left: 60%;
-        margin-right: 30px;
+        margin-left: 40%;
         height: 100%;
         width: 25%;
 }
