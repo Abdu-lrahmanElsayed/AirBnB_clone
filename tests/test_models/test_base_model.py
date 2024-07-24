@@ -14,10 +14,14 @@ class TestBaseModel(unittest.TestCase):
         my_model = BaseModel()
         self.assertTrue(my_model.created_at)
 
-    def test_save(self):
+    def test_save_updated_at(self):
         my_model = BaseModel()
         my_model.save()
         self.assertTrue(my_model.updated_at)
+
+    def test_save(self):
+        my_model = BaseModel()
+        self.assertFalse(my_model.save())
 
     def test_str(self):
         my_model = BaseModel()
