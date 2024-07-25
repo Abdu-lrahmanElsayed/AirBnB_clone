@@ -2,7 +2,7 @@
 """A module for BaseModel class"""
 import uuid
 import datetime
-from models import storage
+import models
 
 
 class BaseModel:
@@ -31,12 +31,11 @@ class BaseModel:
                             value,
                             "%Y-%m-%dT%H:%M:%S.%f"
                             ))
-            storage.new(self)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.datetime.now()
             self.updated_at = self.created_at
-            storage.new(self)
+        models.storage.new(self)
 
     def __str__(self):
         """This method should print:
@@ -50,7 +49,7 @@ class BaseModel:
     def save(self):
         """A public method updates the public instance attribute updated_at"""
         self.updated_at = datetime.datetime.now()
-        storage.save()
+        models.storage.save()
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of __dict__"""

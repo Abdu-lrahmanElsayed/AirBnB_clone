@@ -6,6 +6,7 @@ a module for class FileStorage
 """
 import json
 import os
+from models.base_model import BaseModel
 
 
 class FileStorage:
@@ -42,4 +43,9 @@ class FileStorage:
         """deserializes the JSON file to __objects"""
         if os.path.isfile(FileStorage.__file_path):
             with open(FileStorage.__file_path, 'r', encoding="UTF8") as f:
-                FileStorage.__objects = json.load(f)
+                txt = json.load(f)
+                for k, v in txt.items():
+                    class_name, obj_id = k.split('.')
+                    cls = eval(class_name)
+                    inst = cls(**v)
+                    FileStorage.__objects[k] = inst
