@@ -126,7 +126,7 @@ class HBNBCommand(cmd.Cmd):
                         return
                     else:
                         value = a[3].replace('"', '')
-                        setattr(sotrage.all()[key], k, value)
+                        setattr(storage.all()[key], k, value)
                         storage.all()[key].save()
 
 
