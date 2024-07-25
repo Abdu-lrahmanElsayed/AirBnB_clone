@@ -6,6 +6,7 @@ import unittest
 class TestState(unittest.TestCase):
 
     def test_name(self):
+        self.assertEqual(str, type(State.name()))
         s = State()
         s.name = "Alexandria"
         s.save()
