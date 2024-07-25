@@ -3,7 +3,7 @@ from models.user import User
 import unittest
 
 
-class TestBaseModel(unittest.TestCase):
+class TestUser(unittest.TestCase):
 
     def tets_email(self):
         u = User()
