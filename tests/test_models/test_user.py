@@ -5,25 +5,25 @@ import unittest
 
 class TestUser(unittest.TestCase):
 
-    def tets_email(self):
+    def tets_User_email(self):
         u = User()
         u.email = "airbnb@mail.com"
         u.save()
         self.assertTrue(u.email)
 
-    def test_password(self):
+    def test_User_password(self):
         u = User()
         u.password = "root"
         u.save()
         self.assertTrue(u.password)
 
-    def test_first_name(self):
+    def test_User_first_name(self):
         u = User()
         u.first_name = "Betty"
         u.save()
         self.assertTrue(u.first_name)
 
-    def test_last_name(self):
+    def test_User_last_name(self):
         u = User()
         u.last_name = "Bee"
         u.save()
