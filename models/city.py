@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """A module for city class"""
-import uuid
-import datetime
-import models
 from models.base_model import BaseModel
 
 
