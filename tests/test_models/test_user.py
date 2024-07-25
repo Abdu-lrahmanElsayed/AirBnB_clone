@@ -9,25 +9,25 @@ class TestUser(unittest.TestCase):
         u = User()
         u.email = "airbnb@mail.com"
         u.save()
-        self.assertTrue(u.email)
+        self.assertEqual(u.email, "airbnb@mail.com")
 
     def test_password(self):
         u = User()
         u.password = "root"
         u.save()
-        self.assertTrue(u.password)
+        self.assertEqual(u.password, "root")
 
     def test_first_name(self):
         u = User()
         u.first_name = "Betty"
         u.save()
-        self.assertTrue(u.first_name)
+        self.assertEqual(u.first_name, "Betty")
 
     def test_last_name(self):
         u = User()
         u.last_name = "Bee"
         u.save()
-        self.assertTrue(u.last_name)
+        self.assertEqual(u.last_name, "Bee")
 
 
 if __name__ == '__main__':
