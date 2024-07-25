@@ -4,13 +4,14 @@ import cmd
 from models.base_model import BaseModel
 from models import storage
 import json
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
     """class HBNBCommand inherited from cmd"""
 
     prompt = '(hbnb)'
-    valid_classes = ["BaseModel"]
+    valid_classes = ["BaseModel", "User"]
 
     def do_EOF(self, line):
         """EOF command to exit the program"""
@@ -34,7 +35,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
         else:
-            bm = BaseModel()
+            bm = eval(arg)()
             bm.save()
             print(bm.id)
 

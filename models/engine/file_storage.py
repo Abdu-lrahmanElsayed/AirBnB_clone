@@ -7,6 +7,7 @@ a module for class FileStorage
 import json
 import os
 from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
@@ -20,7 +21,7 @@ class FileStorage:
 
     __file_path = "file.json"
     __objects = {}
-
+    
     def all(self):
         """public method returns the dictionary __objects"""
         return FileStorage.__objects
